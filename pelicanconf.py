@@ -34,4 +34,4 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = C:\Users\Modulus\GitProjects\pelican-themes\html5-dopetrope
+THEME = '/Users/Modulus/GitProjects/pelican-themes/html5-dopetrope'
