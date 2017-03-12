@@ -28,9 +28,39 @@
 <span><a href="/tag/python.html">python</a> / </span>
 <span><a href="/tag/jupyter.html">jupyter</a> / </span>
 <span><a href="/tag/kafkacat.html">kafkacat</a> / </span>
+<span><a href="/tag/ssh.html">ssh</a> / </span>
 </h5>
 
-<p>Here kjeme nåko graie, berre vent</p>
+<p>Here is a guide on how to start consuming tweets with kafka. We have created a setup for you using docker-compose</p>
+<h1><em>1. Open two terminal windows and ssh into your machine</em></h1>
+<ul>
+<li><a href="/ssh_mac_screens.html">SSH Guide for mac</a></li>
+<li><a href="/win-putty-guide.html">SSH Guide for Windows</a></li>
+</ul>
+<h1><em>2. Change directory to you workshop folder</em></h1>
+<p><img alt="Workshop folder" src="/images/workshop/workshop_folder.png"></p>
+<h1><em>3. run "docker-compose up"</em></h1>
+<p><img alt="Docker compose up" src="/images/workshop/docker-compose_up.png"></p>
+<h1><em>4. Wait for the output to stop, it should look like this</em></h1>
+<p><img alt="Kafka wait" src="/images/workshop/kafka-wait.png"></p>
+<h1><em>5. Change to your second window and run the following</em></h1>
+<p><img alt="kafkacat" src="/images/workshop/kafkacat.png"></p>
+<h2><em>You should se output from kafka like this</em></h2>
+<p><img alt="kafka-twitter" src="/images/workshop/kafkacat-twitter.png"></p>
+<h1><em>6. Go to the docker-comopse window, and scroll up</em></h1>
+<p><img alt="Jupyter access" src="/images/workshop/jupyter.png">
+<em>You are looking for the jupyter access url</em></p>
+<h1><em>7. Open a browers window and enter the url</em></h1>
+<p><img alt="addres" src="/images/workshop/jupyter-address.png">
+<em>Replace "localhost" with the ip address you have on you note</em></p>
+<h1><em>8. You will get a warning like this</em></h1>
+<p><img alt="warning https" src="/images/workshop/jupyter-warning.png"></p>
+<h1><em>9. Click advanced and accept the self signed sertificate</em></h1>
+<p><img alt="Accept" src="/images/workshop/jupyter-accept.png"></p>
+<h1><em>10. You are now logged in to jupyter</em></h1>
+<p><img alt="Jupyter" src="/images/workshop/jupyter-loggedin.png"></p>
+<h1><em>11. More info coming soon....</em></h1>
+<p>Please be patient...</p>
 <p><a href="/">Home</a> |
 <a href="/windows-tools-index.html">Home win</a> |
 <a href="/win-putty-guide.html">How to use putty</a> |
