@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>From batches to pipelines - docker-compse</title>
+  <title>Streaming data from twitter | From batches to pipelines</title>
   <meta charset="utf-8">
-<meta name="description" content=""><meta name="author" content="John Sigvald Skauge">  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="description" content="Guide for using streaming data from twitter"><meta name="author" content="John Sigvald Skauge">  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <meta http-equiv="Cache-Control" content="max-age=604800, must-revalidate" />
   <link href="/theme/css/screen.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -18,10 +18,38 @@
     <div class="nav">
     </div>
 </div>    <div id="main">
-<h2>docker-compse</h2>
-<dl>
-<dd><a href="/workshop-index.html">Workshop guide</a></dd>
-</dl>
+<h2><a href="/steps_twitter.html">Streaming data from twitter</a></h2>
+<h5><i class="icon-feather"></i> Wed 15 March 2017
+<i class="icon-bookmarks"></i>
+<span><a href="/tag/twitter.html">twitter</a> / </span>
+<span><a href="/tag/step.html">step</a> / </span>
+<span><a href="/tag/docker.html">docker</a> / </span>
+</h5>
+
+<h1><em>1. Go to twitter and create an application</em></h1>
+<p>Go to: <a href="https://apps.twitter.com/">https://apps.twitter.com/</a></p>
+<h1><em>2. Click "Create new app"</em></h1>
+<p><img alt="twitter1" src="/images/steps/stream/twitter1.png"></p>
+<h1><em>3. Fill in the details</em></h1>
+<p><img alt="twitter details" src="/images/steps/stream/twitter-app1.png"></p>
+<h1><em>4. Generate access keys</em></h1>
+<p><img alt="keys gen" src="/images/steps/stream/twitter-app2.png">
+<em>Click "Generate my access token", the topmost tokens (Consumer key and secret) should be generated up front</em></p>
+<h1><em>5. Results should look like this</em></h1>
+<p><img alt="keys" src="/images/steps/stream/twitter2.png">
+<em>Should look like this</em></p>
+<h1><em>6. Edit your docker-compose.yml inside the workshop folder</em></h1>
+<p><img alt="compose" src="/images/steps/stream/twitter3.png">
+<em>Add your keys like this</em>
+<em>PS! these keys are fake and wont work...</em></p>
+<h1><em>7. Start the container</em></h1>
+<p><img alt="Start the container" src="/images/steps/stream/kafka.png"></p>
+<h1><em>8. You should see a similiar output like below"</em></h1>
+<p><img alt="Start kafka and zookeper" src="/images/steps/stream/kafka_2.png">
+<em>These are live tweets from twitter streaming in</em></p>
+<p><a href="/">Home</a> |  <a href="/guide_steps.html">Step by step guide</a> | <a href="/steps_notebook.html">Next using jupyter</a></p>
+
+<p align="center"><a href="#">on the top</a></p>
     </div>
 </div>
 <div id="footer-wrapper">
