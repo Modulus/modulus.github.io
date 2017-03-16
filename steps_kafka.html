@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Using kafka container | From batches to pipelines</title>
+  <title>Collecting Data | From batches to pipelines</title>
   <meta charset="utf-8">
-<meta name="description" content="Guide for using the kafka container"><meta name="author" content="John Sigvald Skauge">  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="description" content="Start using kafka and test data collection"><meta name="author" content="John Sigvald Skauge">  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <meta http-equiv="Cache-Control" content="max-age=604800, must-revalidate" />
   <link href="/theme/css/screen.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -18,7 +18,7 @@
     <div class="nav">
     </div>
 </div>    <div id="main">
-<h2><a href="/steps_kafka.html">Using kafka container</a></h2>
+<h2><a href="/steps_kafka.html">Collecting Data</a></h2>
 <h5><i class="icon-feather"></i> Wed 15 March 2017
 <i class="icon-bookmarks"></i>
 <span><a href="/tag/kafka.html">kafka</a> / </span>
@@ -27,18 +27,23 @@
 </h5>
 
 <h1><em>1. Open two terminal windows</em></h1>
-<h1><em>2. In window 1 Start the kafka and zookeeper containers</em></h1>
-<p><img alt="Start kafka and zookeper" src="/images/steps/kafka/kafka1.png"></p>
-<h1><em>3 In window 1 Use kafkacat to produce messages</em></h1>
-<p><img alt="Kafkacat1" src="/images/steps/kafka/kafka2.png"></p>
+<h1><em>2. In window 1 - start the kafka and zookeeper containers</em></h1>
+<p><img alt="Start kafka and zookeper" src="/images/steps/kafka/kafka1.png">
+This will start the containers. We have written a docker-compose file that makes it easier to get Kafka and Zookeper cooperating. The remaining components of the workshop are also included in the docker-compose file.</p>
+<p>Take some time to investigate what is included in the docker-compose.yml file if you wish</p>
+<h1><em>3 In window 1 - use kafkacat to produce messages</em></h1>
+<p><img alt="Kafkacat1" src="/images/steps/kafka/kafka2.png">
+Kafkacat will make it easier to consume and produce messages from and to Kafka. It is installed in the system already. Typing <em>kafkacat</em> by itself will give you a list of options.</p>
 <h1><em>4 Write some messages</em></h1>
 <p><img alt="Kafkacat1" src="/images/steps/kafka/kafka3.png">
-<em>Press [Enter] for each message you want to send</em></p>
-<h1><em>5 In window 2 use kafkacat to read the messages</em></h1>
+Press [Enter] between each message you want to send.</p>
+<p><em>Note: ctlr+c ctrl+d will exit the program, but leave it on for now</em></p>
+<h1><em>5 In window 2 - use kafkacat to read the messages</em></h1>
 <p><img alt="Kafkacat1" src="/images/steps/kafka/kafka4.png"></p>
 <h1><em>6 Kafkacat should produce an output like this</em></h1>
 <p><img alt="Kafkacat1" src="/images/steps/kafka/kafka5.png">
-<em>This concludes the guide for using kafka and zookeeper</em></p>
+You can try keeping both windows open and producing messages between them.</p>
+<p><em>Hooray, you have just succesfully used Kafka for storing and retrieving messages. Ready for prime time? Click the next tutorial.</em> </p>
 <p><a href="/">Home</a> | <a href="/guide_steps.html">Step by step guide</a> | <a href="/steps_twitter.html">Next streaming data</a></p>
 
 <p align="center"><a href="#">on the top</a></p>
@@ -46,6 +51,8 @@
 </div>
 <div id="footer-wrapper">
 <ul class="footer">
+     <li class="footer"><a href="/tag/angular.html">angular&nbsp;&bull;&nbsp;</a></li>
+     <li class="footer"><a href="/tag/app.html">app&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/docker.html">docker&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/docker-compse.html">docker-compse&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/guide.html">Guide&nbsp;&bull;&nbsp;</a></li>

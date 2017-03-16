@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Using kafka | From batches to pipelines</title>
+  <title>Exposing data | From batches to pipelines</title>
   <meta charset="utf-8">
-<meta name="description" content="Guide for using the kafka container"><meta name="author" content="John Sigvald Skauge">  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="description" content="Guide for launching a web app pulling data from Kafka"><meta name="author" content="John Sigvald Skauge">  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <meta http-equiv="Cache-Control" content="max-age=604800, must-revalidate" />
   <link href="/theme/css/screen.css" rel="stylesheet" type="text/css" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -18,24 +18,34 @@
     <div class="nav">
     </div>
 </div>    <div id="main">
-<h2><a href="/steps_web.html">Using kafka</a></h2>
+<h2><a href="/steps_web.html">Exposing data</a></h2>
 <h5><i class="icon-feather"></i> Wed 15 March 2017
 <i class="icon-bookmarks"></i>
 <span><a href="/tag/kafka.html">kafka</a> / </span>
 <span><a href="/tag/step.html">step</a> / </span>
 <span><a href="/tag/docker.html">docker</a> / </span>
+<span><a href="/tag/app.html">app</a> / </span>
+<span><a href="/tag/angular.html">angular</a> / </span>
 </h5>
 
-<h1>Coming soon</h1>
+<h1><em>1. Launch the web app container</em></h1>
+<p><img alt="webUP" src="/images/steps/web/web-up.png"></p>
+<h1><em>2. Open the browser</em></h1>
+<p><img alt="Start kafka and zookeper" src="/images/steps/web/stream.png">
+Point your browser to <em>http://<machine_ip>/stream</em></p>
+<p>You should see the results of the second notebook filling the browser window. Take a look into the <em>kafka-web-app/app</em> folder. The application is built in <em>Python</em>, using <em>Flask</em>, and there is an html template and accompanying <em>js</em> that is subscribing to the Kafka topic, and messages are sent asynchronously to the frontend.</p>
+<p>The application can be modified to receive handle this data in a different way. What else can you build with it?</p>
 <h2>Finished!</h2>
 <p>That concludes this step by step guide</p>
-<p><a href="/">Home</a> | <a href="/guide_steps.html">Step by step guide</a> | </p>
+<p><a href="/">Home</a> | <a href="/guide_steps.html">Step by step guide</a> |</p>
 
 <p align="center"><a href="#">on the top</a></p>
     </div>
 </div>
 <div id="footer-wrapper">
 <ul class="footer">
+     <li class="footer"><a href="/tag/angular.html">angular&nbsp;&bull;&nbsp;</a></li>
+     <li class="footer"><a href="/tag/app.html">app&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/docker.html">docker&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/docker-compse.html">docker-compse&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/guide.html">Guide&nbsp;&bull;&nbsp;</a></li>

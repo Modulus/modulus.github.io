@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Using the jupyter container | From batches to pipelines</title>
+  <title>Data Analysis | From batches to pipelines</title>
   <meta charset="utf-8">
 <meta name="description" content="Guide for running jupyter container"><meta name="author" content="John Sigvald Skauge">  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <meta http-equiv="Cache-Control" content="max-age=604800, must-revalidate" />
@@ -18,7 +18,7 @@
     <div class="nav">
     </div>
 </div>    <div id="main">
-<h2><a href="/steps_notebook.html">Using the jupyter container</a></h2>
+<h2><a href="/steps_notebook.html">Data Analysis</a></h2>
 <h5><i class="icon-feather"></i> Wed 15 March 2017
 <i class="icon-bookmarks"></i>
 <span><a href="/tag/jupyter.html">jupyter</a> / </span>
@@ -26,7 +26,22 @@
 <span><a href="/tag/docker.html">docker</a> / </span>
 </h5>
 
-<h1>Coming soon</h1>
+<h1><em>1. Start the Jupyter Notebook container</em></h1>
+<p><img alt="Start kafka and zookeper" src="/images/steps/notebook/jupyter-up.png">
+After running the container you will get a link with an authentication token of the form <em>https://localhost:8888/<token></em>. Replace localhost for the ip of the machine you got on the credentials we printed out for you, and use your browser to open up the remote Jupyter interface.</p>
+<h1><em>2. Checkout the first notebook - Kafka-spark.ipynb</em></h1>
+<p><img alt="spark" src="/images/steps/notebook/spark.png">
+Open the first notebook -<em>Kafka-spark.ipynb</em>- from the Jupyter interface. The instructions are self-contained in the notebook. You will have permissions to modify its contents so be careful in deleting cells. You will also have permissions to create new notebooks for later.</p>
+<h1><em>3. Checkout the second notebook - Kafka-spark-publisher.ipynb</em></h1>
+<p><img alt="publisher" src="/images/steps/notebook/publisher.png">
+Ther second notebook is adapted from the first, and has additional code for publishing back results to a Kafka topic from a stream. Open the second notebook - <em>Kafka-spark-publisher.ipynb</em> - and follow the contained instructions. Remember you can check if the topic is being filled using kafkacat (<em>tip: the topic is called Twitter.processed</em>)</p>
+<h1><em>4. Bonus tasks</em></h1>
+<ul>
+<li>Can you get tweets from #booster2017?</li>
+<li>Can you find top authors?</li>
+<li>What else can we use from the tweet?</li>
+<li>Is there enough data to plot a map for example? (coordinates or location)</li>
+</ul>
 <p><a href="/">Home</a> | <a href="/guide_steps.html">Step by step guide</a> | <a href="/steps_web.html">Next using the web app</a></p>
 
 <p align="center"><a href="#">on the top</a></p>
@@ -34,6 +49,8 @@
 </div>
 <div id="footer-wrapper">
 <ul class="footer">
+     <li class="footer"><a href="/tag/angular.html">angular&nbsp;&bull;&nbsp;</a></li>
+     <li class="footer"><a href="/tag/app.html">app&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/docker.html">docker&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/docker-compse.html">docker-compse&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/guide.html">Guide&nbsp;&bull;&nbsp;</a></li>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Streaming data from twitter | From batches to pipelines</title>
+  <title>Consuming Data | From batches to pipelines</title>
   <meta charset="utf-8">
 <meta name="description" content="Guide for using streaming data from twitter"><meta name="author" content="John Sigvald Skauge">  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
   <meta http-equiv="Cache-Control" content="max-age=604800, must-revalidate" />
@@ -18,7 +18,7 @@
     <div class="nav">
     </div>
 </div>    <div id="main">
-<h2><a href="/steps_twitter.html">Streaming data from twitter</a></h2>
+<h2><a href="/steps_twitter.html">Consuming Data</a></h2>
 <h5><i class="icon-feather"></i> Wed 15 March 2017
 <i class="icon-bookmarks"></i>
 <span><a href="/tag/twitter.html">twitter</a> / </span>
@@ -26,6 +26,7 @@
 <span><a href="/tag/docker.html">docker</a> / </span>
 </h5>
 
+<p>In this guide we will produce data to Kafka by using Twitter's streaming api. For this we will require each one to have a Twitter account, and to get authentication details for the api.</p>
 <h1><em>1. Go to twitter and create an application</em></h1>
 <p>Go to: <a href="https://apps.twitter.com/">https://apps.twitter.com/</a></p>
 <h1><em>2. Click "Create new app"</em></h1>
@@ -34,7 +35,7 @@
 <p><img alt="twitter details" src="/images/steps/stream/twitter-app1.png"></p>
 <h1><em>4. Generate access keys</em></h1>
 <p><img alt="keys gen" src="/images/steps/stream/twitter-app2.png">
-<em>Click "Generate my access token", the topmost tokens (Consumer key and secret) should be generated up front</em></p>
+Click <em>Generate my access token</em>, the topmost tokens (<em>Consumer key</em> and <em>secret</em>) should be generated up front.</p>
 <h1><em>5. Results should look like this</em></h1>
 <p><img alt="keys" src="/images/steps/stream/twitter2.png">
 <em>Should look like this</em></p>
@@ -42,11 +43,12 @@
 <p><img alt="compose" src="/images/steps/stream/twitter3.png">
 <em>Add your keys like this</em>
 <em>PS! these keys are fake and wont work...</em></p>
+<p>The <em>WORDS_TO_TRACK</em> variable will filter the stream for tweets containing any of these (comma separated) words. The selected filters will generate a decent amount of tweets, but won't overwhelm the system. Later we can come back and experiment with this.</p>
 <h1><em>7. Start the container</em></h1>
 <p><img alt="Start the container" src="/images/steps/stream/kafka.png"></p>
-<h1><em>8. You should see a similiar output like below"</em></h1>
+<h1><em>8. You should see a similiar output like below</em></h1>
 <p><img alt="Start kafka and zookeper" src="/images/steps/stream/kafka_2.png">
-<em>These are live tweets from twitter streaming in</em></p>
+Check the topic using the command <em>kafkacat -C -b localhost:9092 -t Twitter.live</em> (the published topic is called Twitter.live). </p>
 <p><a href="/">Home</a> |  <a href="/guide_steps.html">Step by step guide</a> | <a href="/steps_notebook.html">Next using jupyter</a></p>
 
 <p align="center"><a href="#">on the top</a></p>
@@ -54,6 +56,8 @@
 </div>
 <div id="footer-wrapper">
 <ul class="footer">
+     <li class="footer"><a href="/tag/angular.html">angular&nbsp;&bull;&nbsp;</a></li>
+     <li class="footer"><a href="/tag/app.html">app&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/docker.html">docker&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/docker-compse.html">docker-compse&nbsp;&bull;&nbsp;</a></li>
      <li class="footer"><a href="/tag/guide.html">Guide&nbsp;&bull;&nbsp;</a></li>
